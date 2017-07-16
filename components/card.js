@@ -30,8 +30,7 @@ export default class Card extends Component {
                     <Button
                         title={rowData.author}
                         onPress={() => navigate('Detail', { name: rowData.author })}
-                        color="#2196F3"
-                        style={styles.Button}
+                        color="#757575"
                     />
                 </View>
             </View>
@@ -51,9 +50,6 @@ const styles = StyleSheet.create({
     QuotesText: {
         padding: 15,
         textAlign: 'justify',
-    },
-    Button: {
-        width: "50%",
     },
     Header: {
         backgroundColor: "#757575",
