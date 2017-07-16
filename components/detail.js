@@ -10,6 +10,9 @@ import {
 } from 'react-native';
 
 export default class Details extends Component {
+    constructor(){
+        super();
+    }
     static navigationOptions = {
         title: "Author Detail",
         headerStyle: { backgroundColor: '#6495ED' },

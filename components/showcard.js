@@ -14,7 +14,7 @@ import Card from './card';
 
 const quotesData = [
     {
-        quote: "Bute proident dolore ea consequat irure. Do laboris sint sunt cillum aliqua nulla do excepteur ex sit enim. Consequat aliquip dolor est deserunt ea ipsum deserunt minim. Velit officia laborum nostrud commodo ea officia nulla nulla Lorem sit ad mollit in. Cillum ullamco laborum sint duis. Commodo veniam consectetur duis ut. Est aliqua non reprehenderit voluptate voluptate eiusmod ut ullamco occaecat commodo et.",
+        quote: "Bute proident doloreea consequat irure. Do laboris sint sunt cillum aliqua nulla do excepteur ex sit enim. Consequat aliquip dolor est deserunt ea ipsum deserunt minim. Velit officia laborum nostrud commodo ea officia nulla nulla Lorem sit ad mollit in. Cillum ullamco laborum sint duis. Commodo veniam consectetur duis ut. Est aliqua non reprehenderit voluptate voluptate eiusmod ut ullamco occaecat commodo et.",
         author: "Bid Sharma"
     },
     {

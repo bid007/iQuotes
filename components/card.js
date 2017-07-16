@@ -20,14 +20,20 @@ export default class Card extends Component {
         const rowData = this.props.rowData
         return (
             <View style={styles.Card}>
+                <View style={styles.Header}>
+                    <Text style={styles.HeaderText}>Click Me</Text>
+                </View>
                 <Text style={styles.QuotesText}>
                     {rowData.quote}
                 </Text>
-                <Button
-                    title="Show Authors"
-                    onPress={() => navigate('Detail', { name: rowData.author })}
-                    color="red"
-                />
+                <View style={styles.Footer}>
+                    <Button
+                        title={rowData.author}
+                        onPress={() => navigate('Detail', { name: rowData.author })}
+                        color="#2196F3"
+                        style={styles.Button}
+                    />
+                </View>
             </View>
         )
     }
@@ -35,7 +41,7 @@ export default class Card extends Component {
 
 const styles = StyleSheet.create({
     Card: {
-        backgroundColor: "white",
+        backgroundColor: "#F6F7F8",
         marginTop: 8,
         marginBottom: 8,
         alignItems: "center",
@@ -43,6 +49,29 @@ const styles = StyleSheet.create({
         borderRadius: 2,
     },
     QuotesText: {
-        padding: 5
+        padding: 15,
+        textAlign: 'justify',
+    },
+    Button: {
+        width: "50%",
+    },
+    Header: {
+        backgroundColor: "#757575",
+        width: "100%",
+        height: 40,
+        alignItems: "center",
+        justifyContent: "flex-end",
+        flexDirection: 'row',
+        paddingRight: 10
+    },
+    HeaderText: {
+        color: "white",
+        fontSize: 15,
+        fontWeight: "900",
+        textAlign: "center",
+    },
+    Footer: {
+        backgroundColor: "white",
+        width: "100%",
     }
 });
