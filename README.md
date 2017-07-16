@@ -2,6 +2,6 @@
 Quote app built in react-native 
 
 # Installation
-cd iQuotes
-npm install
-react-native run-ios
+1. cd iQuotes
+2. npm install
+3. react-native run-ios
