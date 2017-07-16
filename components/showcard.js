@@ -10,10 +10,11 @@ import {
     ListView
 } from 'react-native';
 import { StackNavigator } from 'react-navigation';
+import Card from './card';
 
 const quotesData = [
     {
-        quote: "Aute proident dolore ea consequat irure. Do laboris sint sunt cillum aliqua nulla do excepteur ex sit enim. Consequat aliquip dolor est deserunt ea ipsum deserunt minim. Velit officia laborum nostrud commodo ea officia nulla nulla Lorem sit ad mollit in. Cillum ullamco laborum sint duis. Commodo veniam consectetur duis ut. Est aliqua non reprehenderit voluptate voluptate eiusmod ut ullamco occaecat commodo et.",
+        quote: "Bute proident dolore ea consequat irure. Do laboris sint sunt cillum aliqua nulla do excepteur ex sit enim. Consequat aliquip dolor est deserunt ea ipsum deserunt minim. Velit officia laborum nostrud commodo ea officia nulla nulla Lorem sit ad mollit in. Cillum ullamco laborum sint duis. Commodo veniam consectetur duis ut. Est aliqua non reprehenderit voluptate voluptate eiusmod ut ullamco occaecat commodo et.",
         author: "Bid Sharma"
     },
     {
@@ -59,16 +60,10 @@ export default class ShowCard extends Component {
                 <ListView
                     dataSource={this.state.dataSource}
                     renderRow={(rowData) => (
-                        <View style={styles.Card}>
-                            <Text style={styles.QuotesText}>
-                                {rowData.quote}
-                            </Text>
-                            <Button
-                                title="Show Authors"
-                                onPress={() => navigate('Detail', { name: rowData.author })}
-                                color="red"
-                            />
-                        </View>
+                        <Card
+                            navigation={this.props.navigation}
+                            rowData={rowData}
+                        />
                     )}
                 />
             </View>
@@ -77,17 +72,6 @@ export default class ShowCard extends Component {
 }
 
 const styles = StyleSheet.create({
-    Card: {
-        backgroundColor: "white",
-        marginTop: 8,
-        marginBottom: 8,
-        alignItems: "center",
-        margin: 8,
-        borderRadius: 2,
-    },
-    QuotesText: {
-        padding: 5
-    },
     AppBody: {
         backgroundColor: "#e3e3e3",
         width: "100%",
