@@ -10,10 +10,14 @@ import {
     ListView
 } from 'react-native';
 import { StackNavigator } from 'react-navigation';
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 export default class Card extends Component {
     constructor() {
         super()
+    }
+    copyToClipboard(){
+        alert("Copied to clipboard");
     }
     render() {
         const { navigate } = this.props.navigation
@@ -21,7 +25,14 @@ export default class Card extends Component {
         return (
             <View style={styles.Card}>
                 <View style={styles.Header}>
-                    <Text style={styles.HeaderText}>Click Me</Text>
+                    <Icon.Button name="share" 
+                        backgroundColor="#757575"
+                        onPress={this.copyToClipboard}
+                    />
+                     <Icon.Button name="copy" 
+                        backgroundColor="#757575"
+                        onPress={this.copyToClipboard}
+                    />
                 </View>
                 <Text style={styles.QuotesText}>
                     {rowData.quote}
@@ -58,7 +69,6 @@ const styles = StyleSheet.create({
         alignItems: "center",
         justifyContent: "flex-end",
         flexDirection: 'row',
-        paddingRight: 10
     },
     HeaderText: {
         color: "white",
